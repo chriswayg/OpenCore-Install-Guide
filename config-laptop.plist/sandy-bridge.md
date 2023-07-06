@@ -3,8 +3,8 @@
 | Support | Version |
 | :--- | :--- |
 | Initial macOS Support | OS X 10.6.7, Snow Leopard |
-| Note 1 | Sandy Bridge's iGPU is only officially supported up-to macOS 10.13 |
-| Note 2 | Most Sandy bridge boards do not support UEFI |
+| Last Supported OS | macOS 10.13, High Sierra |
+| Note | Most Sandy bridge boards do not support UEFI |
 
 ## Starting Point
 
@@ -167,6 +167,14 @@ Generally follow these steps when setting up your iGPU properties. Follow the co
 | ------------------- | ---- | ------- |
 | **`00000100`** | Laptop | To be used with laptops |
 | **`10000300`** | NUC | To be used with Intel NUCs |
+
+#### Laptops with High-End HD Screens
+
+For laptop displays that have a resolution of 1600x900 or greater, it is necessary to add an extra entry which will let macOS know that we are using a DualLink display.
+
+| Key | Type | Value |
+| :--- | :--- | :--- |
+| AAPL00,DualLink | Data | `01000000` |
 
 #### Configuration Notes
 
